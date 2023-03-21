@@ -4,8 +4,8 @@ height = float(input("높이:"))
 
 volume = garo * saero * height
 
-print("박스의 부피는")
-print(volume,"입니다.")
+print("박스의 부피는",volume,"입니다")
+
 # 여기까지 박스 부피 구하는 프로그램
 total_length = garo + saero + height
 
