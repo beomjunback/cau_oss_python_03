@@ -5,24 +5,30 @@
 import math #sqrt 와 pi 를 쓰기위해 import 했다.
 #figure 모듈 구성
 class line: #length의 값을 저장, 수정, 반환하기 위한 class이다.
-    __length = 0 #초기 값은 0이다. __를 사용하여 외부에서 접근이 불가능하게 한다.
-
-    def __init__(self,length): #초기 값을 받는다
-        self.__length = length
+    __width = 0 #초기 값은 0이다. __를 사용하여 외부에서 접근이 불가능하게 한다.
+    __height = 0
+    
+    def __init__(self,width,height): #초기 값을 받는다
+        self.__width = width
+        self.__height = height
         
     def get_length(self): #__length값을 반환해준다.(메소드)
-        return self.__length
+        return self.__width,self.__height
     
-    def set_length(self,length): #__length값 수정을 가능하게 한다.(메소드)
-        self.__length = length
+    def set_length(self,width,height): #__length값 수정을 가능하게 한다.(메소드)
+        self.__width = width
+        self.__height = height
 
-def area_square(length): #정사각형의 넓이를 반환하는 함수이다.
-    return length*length
+def area_rectangle(width,height): #정사각형의 넓이를 반환하는 함수이다.
+    if width<=0 or height<=0: raise ValueError
+    return width*height
     
-def area_circle(length): #원의 넓이를 반환하는 함수이다.
-    return length*length*(math.pi)
+def area_ellipse(width,height): #원의 넓이를 반환하는 함수이다.
+    if width<=0 or height<=0: raise ValueError
+    return width*height*(math.pi)
     
-def area_regular_triangle(length): #정삼각형의 넓이를 반환하는 함수이다.
-    return length*length*math.sqrt(3)/4
+def area_right_triangle(width,height): #정삼각형의 넓이를 반환하는 함수이다.
+    if width<=0 or height<=0: raise ValueError
+    return width*height/2
     
     
