@@ -6,3 +6,6 @@ Homework#2 simple.calculator 구현
 
 ## 2023/05/17
 Homework#4, figure 모듈 구현
+
+## 2023/06/01
+Homework#5, figure 모듈과 figure_main 파일 수정
